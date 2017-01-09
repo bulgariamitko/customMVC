@@ -1,4 +1,6 @@
-<?php 
+<?php
+
+namespace App\Core;
 
 Class Router {
 	protected $routes = [
@@ -39,6 +41,8 @@ Class Router {
 
 	public function callAction($controller, $action)
 	{
+		$controller = "App\\Controllers\\{$controller}";
+
 		$controller = new $controller;
 
 		if (!method_exists($controller, $action)) {

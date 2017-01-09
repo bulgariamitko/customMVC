@@ -1,4 +1,8 @@
-<?php 
+<?php
+
+namespace App\Controllers;
+
+use App\Core\App;
 
 Class UsersController {
 	public function index()
